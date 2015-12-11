@@ -38,7 +38,7 @@ tweetsToGet = tweetSelection[which(!(tweetSelection%in%df$id))]
 indexStart = 1
 i=1
 numIters = (length(tweetsToGet)+windowSize) %/% windowSize
-for(i in 1:numIters){  
+for(i in 287:numIters-1){  
   print(i)
   windowStartIndex = indexStart
   windowEndIndex = windowStartIndex + windowSize-1
@@ -86,7 +86,7 @@ for(i in 1:numIters){
 
 
 
-write.csv(file="dfOfTweetsNew_86544.csv", x=df)
+write.csv(file="dfOfTweetsNew_8474.csv", x=df)
 
 
 
