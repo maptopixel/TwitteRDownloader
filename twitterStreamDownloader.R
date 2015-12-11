@@ -52,4 +52,8 @@ filterStream( file.name=jsonfile,track=keyword, locations=locVec, tweets=1000000
 #load and parse streamed tweets
 tweets.df <- parseTweets(jsonfile, simplify = TRUE)
 
+#better for large files
+library(jsonlite)
+get_tweets <- stream_in(file(jsonfile),pagesize = 10000)
+
 
